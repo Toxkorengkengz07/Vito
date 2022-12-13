@@ -189,7 +189,7 @@ h6 {
 .nav-menu .active i,
 .nav-menu .active:focus i,
 .nav-menu li:hover>a i {
-  color: #149ddd;
+  color: #4671ff;
 }
 
 /* Mobile Navigation */
@@ -299,7 +299,7 @@ section {
 }
 
 .section-bg {
-  background: #193669;
+  background: #e5eaf1;
 }
 
 .section-title {
@@ -312,7 +312,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #16284d;
+  color: #135ab6;
 }
 
 .section-title h2::after {
