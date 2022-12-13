@@ -299,7 +299,7 @@ section {
 }
 
 .section-bg {
-  background: #e5eaf1;
+  background: #ffffff;
 }
 
 .section-title {
@@ -312,7 +312,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #135ab6;
+  color: #347acf;
 }
 
 .section-title h2::after {
