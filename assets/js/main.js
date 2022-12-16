@@ -1,9 +1,4 @@
-/**
-* Template Name: iPortfolio - v3.9.1
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+/* Vito Julio Korengkeng */
 (function() {
   "use strict";
 
@@ -195,10 +190,47 @@
     selector: '.portfolio-lightbox'
   });
 
+/**
+   * Galery isotope and filter
+   */
+window.addEventListener('load', () => {
+  let portfolioContainer = select('.galery-container');
+  if (portfolioContainer) {
+    let portfolioIsotope = new Isotope(portfolioContainer, {
+      itemSelector: '.galery-item'
+    });
+
+    let portfolioFilters = select('#galery-flters li', true);
+
+    on('click', '#galery-flters li', function(e) {
+      e.preventDefault();
+      portfolioFilters.forEach(function(el) {
+        el.classList.remove('filter-active');
+      });
+      this.classList.add('filter-active');
+
+      portfolioIsotope.arrange({
+        filter: this.getAttribute('data-filter')
+      });
+      portfolioIsotope.on('arrangeComplete', function() {
+        AOS.refresh()
+      });
+    }, true);
+  }
+
+});
+
+/**
+ * Initiate Gelery lightbox 
+ */
+const galeryLightbox = GLightbox({
+  selector: '.galery-lightbox'
+});
+  
   /**
    * Portfolio details slider
    */
-  new Swiper('.portfolio-details-slider', {
+  new Swiper('.galery-details-slider', {
     speed: 400,
     loop: true,
     autoplay: {
@@ -215,6 +247,8 @@
   /**
    * Testimonials slider
    */
+
+  /*
   new Swiper('.testimonials-slider', {
     speed: 600,
     loop: true,
@@ -240,7 +274,7 @@
       }
     }
   });
-
+*/
   /**
    * Animation on scroll
    */
