@@ -468,7 +468,7 @@ section {
 # Galery
 --------------------------------------------------------------*/
 .galery{
-  width: 1000px;
+  width: auto;
 }
 .galery .galery-item {
   margin-bottom: 30px;
@@ -572,6 +572,9 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+.portfolio{
+  width: auto ;
+}
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
